@@ -1,0 +1,11 @@
+apiVersion: "cilium.io/v2"
+kind: CiliumNetworkPolicy
+metadata:
+  name: "from-world-to-web"
+spec:
+  endpointSelector:
+    matchLabels:
+      app: web
+  ingress:
+    - fromEntities:
+      - world

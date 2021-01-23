@@ -1,0 +1,13 @@
+# The following policy will deny ingress from “world” on all namespaces on all Pods managed by Cilium. 
+apiVersion: "cilium.io/v2"
+kind: CiliumClusterwideNetworkPolicy
+metadata:
+  name: "external-lockdown"
+spec:
+  endpointSelector: {}
+  ingressDeny:
+  - fromEntities:
+    - "world"
+  ingress:
+  - fromEntities:
+    - "all"
