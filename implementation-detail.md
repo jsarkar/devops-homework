@@ -41,7 +41,7 @@ make build-web
 ### Anti-pattern
 I have taken a shortcut route for DB. I have installed the sqlite as sidecar container. Ideally it should be managed service in cloud provider and have network policy to open ingress/egress traffic to particular of the db from the api endpoint
 
-### Improvement
+### Future Improvement
 * Multi stage dockerfile
 * For local developement and hot reload use [skaffold](https://github.com/GoogleContainerTools/skaffold) or [tilt](https://github.com/tilt-dev/tilt)
 * For production grade CD use [argo-cd](https://github.com/argoproj/argo-cd)
